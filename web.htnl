@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web制作 | Criety Group</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 画面上部のロゴ（クリックでトップに戻るように設定） -->
+    <nav class="top-nav">
+        <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">Criety Group</a></div>
+    </nav>
+
+    <!-- ページの内容 -->
+    <div class="page-container">
+        <h2 class="page-title">Web制作</h2>
+        <p>
+            ロジカルな情報設計と、視覚的な美しさを両立させたWebサイトを制作します。<br>
+            Adobe製ソフトを活用した緻密なデザイン制作から、現在のトレンドに合わせたコーディングまで、一貫して対応可能です。
+        </p>
+        <p>※ここに実績の画像や、制作のフロー（手順）などを今後追加していきます。</p>
+        
+        <a href="index.html" class="btn">トップページへ戻る</a>
+    </div>
+</body>
+</html>
