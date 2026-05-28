@@ -133,10 +133,35 @@
                     </table>
                 </div>
             </div>
-
         </div>
     </section>
     <!-- サイトのフッター -->
     <footer class="site-footer">
         <p>&copy; 2026 Criety Group. All rights reserved.</p>
     </footer>
+    <!-- ▼ スクロールアニメーション用センサー ▼ -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const faders = document.querySelectorAll('.fade-in-up');
+            const appearOptions = {
+                threshold: 0.2, /* 要素が20%画面に入ったら発動 */
+                rootMargin: "0px 0px -50px 0px" /* 画面の下から50px手前で感知 */
+            };
+
+            const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) {
+                        return;
+                    } else {
+                        entry.target.classList.add('appear');
+                        observer.unobserve(entry.target); /* 一度表示されたらセンサーを解除 */
+                    }
+                });
+            }, appearOptions);
+
+            faders.forEach(fader => {
+                appearOnScroll.observe(fader);
+            });
+        });
+    </script>
+</body>
