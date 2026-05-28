@@ -4,8 +4,10 @@ body {
     padding: 0;
     font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
     background-color: #f0f4f8; /* ほんのり青みがかった白 */
+    color: #102a43; /* 深いネイビー（全体の文字色） */
 }
 
+/* 画面上部のナビゲーションバー */
 .top-nav {
     position: absolute;
     top: 0;
@@ -23,6 +25,7 @@ body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
+/* 画面いっぱいに広がるヒーローセクション */
 .hero-section {
     height: 100vh;
     display: flex;
@@ -34,4 +37,65 @@ body {
     font-size: 48px;
     color: #102a43; /* 深いネイビー */
     letter-spacing: 0.1em;
+}
+
+/* ▼▼ 事業内容セクションのデザイン ▼▼ */
+
+.services-section {
+    padding: 100px 40px 120px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 0.15em;
+    margin-bottom: 60px;
+    color: #102a43;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.service-card {
+    background-color: #ffffff; /* カードは真っ白にして背景から浮き立たせる */
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid #dce4ec; /* 少し青みがかった薄いグレーの枠線 */
+    transition: all 0.3s ease;
+}
+
+/* マウスを乗せた時の動き */
+.service-card:hover {
+    box-shadow: 0 10px 20px rgba(16, 42, 67, 0.08); /* 影の色もネイビー系に調整 */
+    transform: translateY(-5px);
+}
+
+.service-card h3 {
+    margin-top: 0;
+    font-size: 20px;
+    border-bottom: 2px solid #102a43; /* タイトル下の線をネイビーに */
+    padding-bottom: 12px;
+    display: inline-block;
+    color: #102a43;
+}
+
+.service-card p {
+    color: #334e68; /* 本文は少しだけ明るいネイビーグレーで読みやすく */
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+/* スマホ向けのレイアウト調整 */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero-section .catchphrase {
+        font-size: 32px;
+    }
 }
