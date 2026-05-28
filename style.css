@@ -494,3 +494,44 @@ body {
         gap: 20px;
     }
 }
+/* ▼ 料金表の改善（枠線と余白の追加） ▼ */
+.price-box {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid #dce4ec; /* 外側の枠線 */
+    box-shadow: 0 4px 15px rgba(16, 42, 67, 0.05); /* 箱全体を少し浮かせる */
+}
+
+.price-table {
+    width: 100%;
+    border-collapse: collapse; /* セル同士の隙間をなくしてピタッとくっつける */
+    margin-bottom: 24px;
+}
+
+.price-table th, .price-table td {
+    padding: 24px; /* ★隙間（余白）を大きくとって見やすく！ */
+    border: 1px solid #dce4ec; /* ★エクセルのようなハッキリとした枠線を引く */
+    text-align: left;
+    vertical-align: middle; /* 文字を上下の中央に揃える */
+}
+
+.price-table th {
+    width: 28%; /* 左側の見出しの幅を固定 */
+    color: #102a43;
+    font-weight: bold;
+    background-color: #f8f9fa; /* 見出しの背景だけ薄いグレーにしてメリハリを出す */
+}
+
+.price-table td {
+    color: #334e68;
+    background-color: #ffffff;
+    line-height: 1.8;
+}
+
+.note-text {
+    font-size: 13px;
+    color: #666666;
+    margin-top: 8px;
+    display: block; /* 注釈を改行させて見やすく */
+}
