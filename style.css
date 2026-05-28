@@ -252,3 +252,116 @@ body {
         margin-bottom: 30px;
     }
 }
+/* =========================================
+   家庭教師ページ（tutor.html）内の詳細デザイン
+========================================= */
+
+.tutor-content-section {
+    margin-bottom: 60px;
+}
+
+.sub-title {
+    font-size: 22px;
+    color: #102a43;
+    margin-bottom: 30px;
+}
+
+/* 強み（Strength）のリスト */
+.strength-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3列に並べる */
+    gap: 30px;
+}
+
+.strength-item {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #dce4ec;
+}
+
+.strength-item h3 {
+    font-size: 18px;
+    color: #2a69ac; /* 強みのタイトルはアクセントカラーに */
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.strength-item p {
+    font-size: 15px;
+    color: #334e68;
+    margin: 0;
+    line-height: 1.7;
+}
+
+/* サービス概要（Info List） */
+.info-list {
+    list-style: none; /* リストの点を消す */
+    padding: 0;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #dce4ec;
+}
+
+.info-list li {
+    font-size: 16px;
+    color: #334e68;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f4f8; /* 項目間に薄い線を引く */
+}
+
+.info-list li:last-child {
+    border-bottom: none; /* 最後の項目は線を消す */
+}
+
+.info-list strong {
+    color: #102a43;
+    display: inline-block;
+    width: 120px; /* 見出しの幅を揃える */
+}
+
+/* お問い合わせエリア（Page Action） */
+.page-action {
+    background-color: #102a43; /* ネイビーの背景 */
+    color: #ffffff;
+    text-align: center;
+    padding: 50px 40px;
+    border-radius: 8px;
+    margin-top: 80px;
+}
+
+.page-action p {
+    margin-top: 0;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.page-action .btn {
+    background-color: #ffffff; /* ボタンを白にする */
+    color: #102a43; /* 文字をネイビーにする */
+    margin-top: 10px;
+}
+.page-action .btn:hover {
+    background-color: #f0f4f8;
+    transform: translateY(-2px);
+}
+
+/* 家庭教師ページのレスポンシブ調整 */
+@media (max-width: 768px) {
+    .strength-list {
+        grid-template-columns: 1fr; /* 3列から1列へ */
+        gap: 20px;
+    }
+    .page-action {
+        padding: 40px 20px;
+    }
+    .page-action p {
+        font-size: 16px;
+    }
+    .info-list strong {
+        display: block; /* 見出しを改行させる */
+        width: auto;
+        margin-bottom: 4px;
+    }
+}
