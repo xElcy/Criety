@@ -86,21 +86,37 @@ body {
    トップページ（index.html）専用のデザイン
 ========================================= */
 
-/* 画面いっぱいに広がるヒーローセクション */
+/* 画面いっぱいに広がるヒーローセクション（背景画像設定） */
 .hero-section {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ffffff; /* ヒーローだけ白背景にして際立たせる */
+    background-image: url('backart.png'); /* ★ここに背景画像を指定 */
+    background-size: cover; /* 画面いっぱいに広げる */
+    background-position: center; /* 画像の中央を表示 */
+    background-attachment: fixed; /* ★スクロールしても背景が固定されるオシャレな演出 */
+    position: relative;
+}
+
+/* 背景画像の上に暗いフィルターをかけて文字を読みやすくする */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(16, 42, 67, 0.4); /* ネイビーの半透明フィルター */
+    z-index: 1;
 }
 
 /* キャッチコピーの文字デザイン */
 .catchphrase {
-    font-size: 48px;
-    color: #102a43;
-    letter-spacing: 0.1em;
+    font-size: 52px;
+    color: #ffffff; /* 背景が暗くなるので文字は白に変更 */
+    letter-spacing: 0.15em;
     margin: 0;
+    position: relative;
+    z-index: 2; /* フィルターより手前に文字を出す */
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* 文字に影をつけて際立たせる */
 }
 
 /* ▼ 事業内容（SERVICES）セクション ▼ */
@@ -669,5 +685,83 @@ body {
     }
     .pc-only {
         display: none; /* スマホではこの改行を無効にする */
+    }
+}
+/* =========================================
+   プロフィール（会社概要・代表挨拶）のデザイン
+========================================= */
+
+.profile-flex-container {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+    text-align: left;
+}
+
+/* 左側のメッセージ部分 */
+.profile-message {
+    flex: 1; /* 半分のスペースを使う */
+}
+
+.profile-heading {
+    font-size: 24px;
+    color: #102a43;
+    line-height: 1.5;
+    margin-top: 0;
+    margin-bottom: 24px;
+    border-bottom: 2px solid #2a69ac;
+    padding-bottom: 16px;
+    display: inline-block;
+}
+
+.profile-message p {
+    font-size: 15px;
+    color: #334e68;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+/* 右側の会社概要（テーブル）部分 */
+.company-overview {
+    flex: 1; /* 半分のスペースを使う */
+    background-color: #ffffff;
+    padding: 32px;
+    border-radius: 8px;
+    border: 1px solid #dce4ec;
+    box-shadow: 0 4px 15px rgba(16, 42, 67, 0.05);
+}
+
+.overview-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.overview-table th, .overview-table td {
+    padding: 16px 0;
+    border-bottom: 1px dashed #dce4ec;
+    font-size: 15px;
+}
+
+.overview-table tr:last-child th, .overview-table tr:last-child td {
+    border-bottom: none;
+}
+
+.overview-table th {
+    width: 30%;
+    color: #102a43;
+    text-align: left;
+    vertical-align: top;
+}
+
+.overview-table td {
+    color: #334e68;
+    line-height: 1.6;
+}
+
+/* スマホ向けの調整 */
+@media (max-width: 900px) {
+    .profile-flex-container {
+        flex-direction: column; /* スマホでは縦並びにする */
+        gap: 40px;
     }
 }
