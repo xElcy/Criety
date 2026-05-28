@@ -547,42 +547,58 @@ body {
     display: block; /* 注釈を改行させて見やすく */
 }
 /* =========================================
-   トップページ：VISIONセクションのデザイン
+   トップページ：VISIONセクションのデザイン（清潔感・信頼感重視）
 ========================================= */
 
 .vision-section {
-    background-color: #102a43; /* ビジョンは深いネイビー背景で重厚感と信頼感を出す */
-    color: #ffffff;
+    background-color: #ffffff; /* SF感を避け、クリーンな白背景に */
+    color: #102a43;
     padding: 120px 20px;
 }
 
 .vision-container {
     max-width: 800px;
     margin: 0 auto;
-    text-align: center; /* 中央揃えでマニフェスト（宣言）っぽく */
 }
 
 .vision-title {
     font-size: 18px;
     letter-spacing: 0.2em;
-    color: #2a69ac; /* アクセントカラーのブルー */
+    color: #2a69ac;
     margin-bottom: 24px;
+    text-align: center;
 }
 
 .vision-subtitle {
     font-size: 32px;
     line-height: 1.5;
     margin-bottom: 60px;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid #dce4ec; /* 薄いグレーの線に変更 */
     padding-bottom: 40px;
+    text-align: center;
+    color: #102a43;
+}
+
+.vision-block {
+    margin-bottom: 40px;
+    padding: 32px;
+    background-color: #f8f9fa; /* ほんのりグレーの箱に入れて読みやすく */
+    border-radius: 8px;
+    border-left: 4px solid #2a69ac; /* 左側に青いアクセントライン */
+}
+
+.vision-block h4 {
+    font-size: 20px;
+    color: #102a43;
+    margin-top: 0;
+    margin-bottom: 16px;
 }
 
 .vision-text p {
     font-size: 16px;
     line-height: 2.0;
-    margin-bottom: 32px;
-    opacity: 0.9;
-    text-align: left; /* 本文は読みやすいように左揃え */
+    margin: 0;
+    color: #334e68;
 }
 
 /* スマホ向けの調整 */
@@ -591,9 +607,9 @@ body {
         padding: 80px 20px;
     }
     .vision-subtitle {
-        font-size: 24px;
+        font-size: 22px;
     }
-    .vision-text p {
-        font-size: 15px;
+    .vision-block {
+        padding: 24px;
     }
 }
