@@ -546,3 +546,54 @@ body {
     margin-top: 8px;
     display: block; /* 注釈を改行させて見やすく */
 }
+/* =========================================
+   トップページ：VISIONセクションのデザイン
+========================================= */
+
+.vision-section {
+    background-color: #102a43; /* ビジョンは深いネイビー背景で重厚感と信頼感を出す */
+    color: #ffffff;
+    padding: 120px 20px;
+}
+
+.vision-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center; /* 中央揃えでマニフェスト（宣言）っぽく */
+}
+
+.vision-title {
+    font-size: 18px;
+    letter-spacing: 0.2em;
+    color: #2a69ac; /* アクセントカラーのブルー */
+    margin-bottom: 24px;
+}
+
+.vision-subtitle {
+    font-size: 32px;
+    line-height: 1.5;
+    margin-bottom: 60px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding-bottom: 40px;
+}
+
+.vision-text p {
+    font-size: 16px;
+    line-height: 2.0;
+    margin-bottom: 32px;
+    opacity: 0.9;
+    text-align: left; /* 本文は読みやすいように左揃え */
+}
+
+/* スマホ向けの調整 */
+@media (max-width: 768px) {
+    .vision-section {
+        padding: 80px 20px;
+    }
+    .vision-subtitle {
+        font-size: 24px;
+    }
+    .vision-text p {
+        font-size: 15px;
+    }
+}
