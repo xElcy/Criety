@@ -98,4 +98,23 @@ body {
     .hero-section .catchphrase {
         font-size: 32px;
     }
+    /* ▼▼ ボタンのデザイン ▼▼ */
+.btn {
+    display: inline-block;
+    margin-top: 24px;
+    padding: 12px 32px;
+    background-color: #2a69ac; /* アクセントカラー（仮のブルー） */
+    color: #ffffff; /* ボタンの文字は白 */
+    text-decoration: none; /* リンクの下線を消す */
+    border-radius: 25px; /* 角を丸くして柔らかい印象に */
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    transition: background-color 0.3s ease; /* 色が変わるアニメーション */
+}
+
+/* ボタンにマウスを乗せた時 */
+.btn:hover {
+    background-color: #102a43; /* マウスを乗せたらネイビーに変わる */
+}
 }
