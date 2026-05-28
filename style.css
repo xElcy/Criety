@@ -14,15 +14,15 @@ body {
 
 /* 画面上部のナビゲーションバー（ロゴバー） */
 .top-nav {
-    position: fixed; /* 画面の上部に固定 */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 24px 40px;
+    padding: 20px 40px;
     box-sizing: border-box;
-    background-color: rgba(240, 244, 248, 0.9); /* 背景を少し透明にして重ねる */
-    backdrop-filter: blur(5px); /* 背景をぼかす（イマドキな表現） */
-    z-index: 1000; /* 一番手前に表示 */
+    background-color: #ffffff; /* ★白背景をつけてはっきりさせる */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* ★下に薄い影をつけて浮き立たせる */
+    z-index: 1000;
 }
 
 /* 英語ロゴのデザイン */
