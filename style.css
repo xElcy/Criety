@@ -1,22 +1,31 @@
+/* =========================================
+   Criety Group 全体の共通デザイン設定
+========================================= */
+
 /* サイト全体の基本的な設定 */
 body {
     margin: 0;
     padding: 0;
     font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
-    background-color: #f0f4f8; /* ほんのり青みがかった白 */
-    color: #102a43; /* 深いネイビー（全体の文字色） */
+    background-color: #f0f4f8; /* ベースカラー：ほんのり青みがかった白 */
+    color: #102a43; /* メインカラー：深いネイビー（全体の文字色） */
+    line-height: 1.6;
 }
 
-/* 画面上部のナビゲーションバー */
+/* 画面上部のナビゲーションバー（ロゴバー） */
 .top-nav {
-    position: absolute;
+    position: fixed; /* 画面の上部に固定 */
     top: 0;
     left: 0;
     width: 100%;
     padding: 24px 40px;
     box-sizing: border-box;
+    background-color: rgba(240, 244, 248, 0.9); /* 背景を少し透明にして重ねる */
+    backdrop-filter: blur(5px); /* 背景をぼかす（イマドキな表現） */
+    z-index: 1000; /* 一番手前に表示 */
 }
 
+/* 英語ロゴのデザイン */
 .logo {
     font-size: 20px;
     font-weight: bold;
@@ -25,28 +34,35 @@ body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
-/* 画面いっぱいに広がるヒーローセクション */
-.hero-section {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* ロゴのリンク設定（ロゴをクリックしたらトップに戻る） */
+.logo a {
+    color: inherit; /* 親要素（.logo）の色を受け継ぐ */
+    text-decoration: none; /* 下線を消す */
 }
 
-.catchphrase {
-    font-size: 48px;
-    color: #102a43; /* 深いネイビー */
-    letter-spacing: 0.1em;
+/* 共通のボタンデザイン */
+.btn {
+    display: inline-block;
+    margin-top: 24px;
+    padding: 12px 32px;
+    background-color: #2a69ac; /* アクセントカラー（仮のブルー） */
+    color: #ffffff; /* ボタンの文字は白 */
+    text-decoration: none; /* リンクの下線を消す */
+    border-radius: 25px; /* 角を丸くして柔らかい印象に */
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease; /* 色と動きのアニメーション */
 }
 
-/* ▼▼ 事業内容セクションのデザイン ▼▼ */
-
-.services-section {
-    padding: 100px 40px 120px;
-    max-width: 1000px;
-    margin: 0 auto;
+/* ボタンにマウスを乗せた時 */
+.btn:hover {
+    background-color: #102a43; /* マウスを乗せたらネイビーに変わる */
+    transform: translateY(-2px); /* 少し上に浮く */
+    box-shadow: 0 4px 10px rgba(16, 42, 67, 0.15); /* 影をつける */
 }
 
+/* 共通のセクションタイトル（SERVICES, PROFILE） */
 .section-title {
     text-align: center;
     font-size: 24px;
@@ -55,18 +71,51 @@ body {
     color: #102a43;
 }
 
+/* =========================================
+   トップページ（index.html）専用のデザイン
+========================================= */
+
+/* 画面いっぱいに広がるヒーローセクション */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff; /* ヒーローだけ白背景にして際立たせる */
+}
+
+/* キャッチコピーの文字デザイン */
+.catchphrase {
+    font-size: 48px;
+    color: #102a43;
+    letter-spacing: 0.1em;
+    margin: 0;
+}
+
+/* ▼ 事業内容（SERVICES）セクション ▼ */
+.services-section {
+    padding: 100px 40px 120px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* 4つの事業を並べるグリッド */
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* 空間を「1:1」の2列に分割 */
     gap: 40px;
 }
 
+/* 各事業のカードデザイン */
 .service-card {
     background-color: #ffffff; /* カードは真っ白にして背景から浮き立たせる */
     padding: 40px;
     border-radius: 8px;
     border: 1px solid #dce4ec; /* 少し青みがかった薄いグレーの枠線 */
     transition: all 0.3s ease;
+    display: flex; /* カード内の要素を縦に並べるため */
+    flex-direction: column;
+    align-items: flex-start; /* ボタンを左寄せに */
 }
 
 /* マウスを乗せた時の動き */
@@ -82,62 +131,19 @@ body {
     padding-bottom: 12px;
     display: inline-block;
     color: #102a43;
+    margin-bottom: 16px;
 }
 
 .service-card p {
     color: #334e68; /* 本文は少しだけ明るいネイビーグレーで読みやすく */
     line-height: 1.8;
     margin-bottom: 0;
+    flex-grow: 1; /* 残りのスペースを埋めてボタンの位置を揃える */
 }
 
-/* スマホ向けのレイアウト調整 */
-@media (max-width: 768px) {
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
-    .hero-section .catchphrase {
-        font-size: 32px;
-    }
-}
-    /* ▼▼ ボタンのデザイン ▼▼ */
-.btn {
-    display: inline-block;
-    margin-top: 24px;
-    padding: 12px 32px;
-    background-color: #2a69ac; /* アクセントカラー（仮のブルー） */
-    color: #ffffff; /* ボタンの文字は白 */
-    text-decoration: none; /* リンクの下線を消す */
-    border-radius: 25px; /* 角を丸くして柔らかい印象に */
-    font-size: 14px;
-    font-weight: bold;
-    letter-spacing: 0.05em;
-    transition: background-color 0.3s ease; /* 色が変わるアニメーション */
-}
-
-/* ボタンにマウスを乗せた時 */
-.btn:hover {
-    background-color: #102a43; /* マウスを乗せたらネイビーに変わる */
-}
-/* ▼▼ サブページ（詳細ページ）のレイアウト ▼▼ */
-.page-container {
-    padding: 120px 40px 60px; /* 上部のロゴに重ならないように余白を作る */
-    max-width: 800px;
-    margin: 0 auto;
-    min-height: 100vh; /* 最低でも画面の高さ分は確保する */
-    box-sizing: border-box;
-}
-
-.page-title {
-    font-size: 32px;
-    color: #102a43;
-    border-bottom: 2px solid #102a43; /* タイトルの下にネイビーの線を引く */
-    padding-bottom: 16px;
-    margin-bottom: 40px;
-    letter-spacing: 0.1em;
-}
-/* ▼▼ プロフィールセクション ▼▼ */
+/* ▼ プロフィール（PROFILE）セクション ▼ */
 .profile-section {
-    padding: 80px 40px;
+    padding: 100px 40px;
     background-color: #ffffff; /* 白背景でスッキリと */
     text-align: center;
 }
@@ -151,14 +157,98 @@ body {
     color: #334e68;
     line-height: 2.0;
     margin-bottom: 32px;
+    font-size: 16px;
 }
 
-/* ▼▼ フッター ▼▼ */
+/* =========================================
+   サブページ（tutor.htmlなど）専用のデザイン
+========================================= */
+
+/* ▼▼ 【重要】文字重なりを直す設定 ▼▼ */
+.page-container {
+    padding-top: 140px; /* ★上部に大きな余白を作って、固定されたロゴバーと重ならないようにする */
+    padding-bottom: 80px;
+    padding-left: 20px; /* スマホで見やすくするために左右にも少し余白を追加 */
+    padding-right: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* サブページのメインタイトル */
+.page-title {
+    font-size: 32px;
+    color: #102a43;
+    border-bottom: 2px solid #102a43; /* タイトルの下にネイビーの線を引く */
+    padding-bottom: 16px;
+    margin-bottom: 40px;
+    letter-spacing: 0.1em;
+}
+
+/* サブページ用のテキスト設定（必要に応じて追加） */
+.lead-text {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    color: #334e68;
+}
+
+/* トップへ戻るリンク（下の方） */
+.back-link {
+    display: inline-block;
+    margin-top: 60px;
+    color: #2a69ac;
+    text-decoration: none;
+    font-size: 14px;
+}
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* =========================================
+   フッター・レスポンシブの設定
+========================================= */
+
+/* サイトのフッター（一番下） */
 .site-footer {
     background-color: #102a43; /* ネイビーの帯でサイト全体を引き締める */
     color: #ffffff;
     text-align: center;
     padding: 24px 0;
-    font-size: 14px;
+    font-size: 12px;
     letter-spacing: 0.05em;
+}
+
+/* スマホ向けのレイアウト調整（画面幅が768px以下の時のルール） */
+@media (max-width: 768px) {
+    /* ナビゲーションバーの余白を縮小 */
+    .top-nav {
+        padding: 16px 20px;
+    }
+    
+    /* ヒーローセクションの文字を小さく */
+    .hero-section .catchphrase {
+        font-size: 32px;
+    }
+    
+    /* 事業内容（SERVICES）を1列に並べ替え */
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    /* 各セクションの余白を調整 */
+    .services-section, .profile-section {
+        padding: 60px 20px;
+    }
+    
+    /* サブページのタイトルを小さく、余白を調整 */
+    .page-container {
+        padding-top: 100px;
+    }
+    .page-title {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
 }
