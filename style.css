@@ -18,10 +18,10 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 40px;
+    padding: 12px 40px; /* ★ロゴが大きくなる分、上下の余白（20px→12px）を減らして調整 */
     box-sizing: border-box;
-    background-color: #ffffff; /* ★白背景をつけてはっきりさせる */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* ★下に薄い影をつけて浮き立たせる */
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     z-index: 1000;
 }
 
@@ -39,12 +39,12 @@ body {
     color: inherit; /* 親要素（.logo）の色を受け継ぐ */
     text-decoration: none; /* 下線を消す */
 }
-/* ▼ 追加：ロゴ画像のサイズ調整 ▼ */
+/* ▼ ロゴ画像のサイズ調整 ▼ */
 .logo-img {
-    height: 32px; /* ロゴの縦幅。大きすぎる/小さすぎる場合はこの数値を調整してください */
-    width: auto; /* 横幅は縦に合わせて自動調整 */
-    vertical-align: middle; /* 画像を上下の真ん中に配置 */
-    transition: opacity 0.3s ease; /* マウスを乗せた時のアニメーション準備 */
+    height: 70px; /* ★32pxから一気に大きく！ここをいじるとミリ単位でサイズ調整できます */
+    width: auto;
+    vertical-align: middle;
+    transition: opacity 0.3s ease;
 }
 
 /* ロゴにマウスを乗せた時に少しフワッと薄くする（リンクだと分かりやすくする） */
