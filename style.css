@@ -460,3 +460,37 @@ body {
         padding: 30px 20px;
     }
 }
+/* ▼ オリジナル学習管理ツール ▼ */
+.management-tools {
+    display: flex;
+    gap: 30px;
+}
+.tool-box {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 8px;
+    border-top: 4px solid #2a69ac; /* 上部に青いアクセントライン */
+    flex: 1; /* 2つの箱を同じ幅にする */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+}
+.tool-title {
+    font-size: 18px;
+    color: #102a43;
+    margin-top: 0;
+    margin-bottom: 16px;
+    text-align: center;
+}
+.tool-box p {
+    font-size: 15px;
+    color: #334e68;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* スマホ向けの調整（学習管理ツール） */
+@media (max-width: 768px) {
+    .management-tools {
+        flex-direction: column; /* スマホでは縦並びにする */
+        gap: 20px;
+    }
+}
