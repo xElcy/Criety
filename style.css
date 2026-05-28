@@ -365,3 +365,98 @@ body {
         margin-bottom: 4px;
     }
 }
+/* =========================================
+   家庭教師LP（専用メインページ）のデザイン
+========================================= */
+
+/* 家庭教師専用のヒーローセクション */
+.tutor-hero {
+    height: 80vh; /* 画面の80%の高さ */
+    background-color: #102a43; /* 誠実なネイビー背景 */
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    margin-bottom: 60px;
+}
+
+.tutor-hero-content h1 {
+    font-size: 40px;
+    line-height: 1.4;
+    letter-spacing: 0.1em;
+    margin-bottom: 20px;
+}
+
+.tutor-hero-content p {
+    font-size: 18px;
+    opacity: 0.9;
+    margin-bottom: 40px;
+}
+
+/* LP用のコンテナ調整 */
+.tutor-lp-container {
+    padding-top: 0; /* ヒーローセクションがあるため上の余白を消す */
+}
+
+/* 中央揃えのタイトルとテキスト */
+.center-title {
+    text-align: center;
+}
+.center-text {
+    text-align: center;
+}
+
+/* お悩みセクションのデザイン */
+.worry-section {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    border: 2px dashed #2a69ac; /* 目立つように青い点線で囲む */
+}
+
+.worry-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto 30px;
+    max-width: 500px;
+}
+
+.worry-list li {
+    font-size: 16px;
+    color: #334e68;
+    padding: 12px 0 12px 30px;
+    position: relative;
+    border-bottom: 1px solid #f0f4f8;
+}
+
+/* リストの横にチェックマーク風の装飾をつける */
+.worry-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #2a69ac;
+    font-weight: bold;
+}
+
+/* プロフィールボックス */
+.profile-box {
+    background-color: #f8f9fa;
+    padding: 40px;
+    border-radius: 8px;
+    border-left: 6px solid #102a43; /* 左側にネイビーの太い線を入れてアクセントに */
+}
+
+/* LP用スマホ対応 */
+@media (max-width: 768px) {
+    .tutor-hero {
+        height: 60vh;
+    }
+    .tutor-hero-content h1 {
+        font-size: 28px;
+    }
+    .worry-section {
+        padding: 30px 20px;
+    }
+}
