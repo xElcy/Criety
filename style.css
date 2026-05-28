@@ -135,3 +135,30 @@ body {
     margin-bottom: 40px;
     letter-spacing: 0.1em;
 }
+/* ▼▼ プロフィールセクション ▼▼ */
+.profile-section {
+    padding: 80px 40px;
+    background-color: #ffffff; /* 白背景でスッキリと */
+    text-align: center;
+}
+
+.profile-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.profile-content p {
+    color: #334e68;
+    line-height: 2.0;
+    margin-bottom: 32px;
+}
+
+/* ▼▼ フッター ▼▼ */
+.site-footer {
+    background-color: #102a43; /* ネイビーの帯でサイト全体を引き締める */
+    color: #ffffff;
+    text-align: center;
+    padding: 24px 0;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+}
