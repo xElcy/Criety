@@ -613,3 +613,61 @@ body {
         padding: 24px;
     }
 }
+/* =========================================
+   トップページ：ビジョンと事業を繋ぐブリッジセクション
+========================================= */
+
+.bridge-section {
+    background-color: #102a43; /* ビジョンのクリーンな白から一転、重厚なネイビーで視線を釘付けにする */
+    color: #ffffff;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.bridge-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.bridge-catchphrase {
+    font-size: 36px;
+    line-height: 1.5;
+    letter-spacing: 0.1em;
+    margin-bottom: 40px;
+    color: #ffffff;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3); /* 文字に少し影をつけて際立たせる */
+}
+
+.bridge-text p {
+    font-size: 16px;
+    line-height: 2.2;
+    margin-bottom: 24px;
+    color: #dce4ec; /* 真っ白ではなく少し落ち着いた色で読みやすく */
+}
+
+.bridge-text strong {
+    color: #58a6ff; /* 強調部分はブルーのアクセントカラーで光らせる */
+    font-size: 18px;
+}
+
+/* パソコン表示の時だけ改行させるための便利なクラス */
+.pc-only {
+    display: inline;
+}
+
+/* スマホ向けの調整 */
+@media (max-width: 768px) {
+    .bridge-section {
+        padding: 60px 20px;
+    }
+    .bridge-catchphrase {
+        font-size: 24px;
+    }
+    .bridge-text p {
+        font-size: 15px;
+        text-align: left; /* スマホでは左揃えの方が見やすい */
+    }
+    .pc-only {
+        display: none; /* スマホではこの改行を無効にする */
+    }
+}
