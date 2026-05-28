@@ -3,29 +3,26 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
-    background-color: #f8f9fa; /* 薄いグレーの背景色 */
+    background-color: #f0f4f8; /* ほんのり青みがかった白 */
 }
 
-/* 画面上部のナビゲーションバー */
 .top-nav {
-    position: absolute; /* 画面の上部に固定 */
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 24px 40px; /* 上下・左右の余白 */
+    padding: 24px 40px;
     box-sizing: border-box;
 }
 
-/* 英語ロゴのデザイン */
 .logo {
     font-size: 20px;
     font-weight: bold;
-    color: #111111; /* 黒に近い色 */
+    color: #102a43; /* 深いネイビー */
     letter-spacing: 0.05em;
-    font-family: 'Helvetica Neue', Arial, sans-serif; /* 英語が美しく見えるフォント */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
-/* 画面いっぱいに広がるヒーローセクション */
 .hero-section {
     height: 100vh;
     display: flex;
@@ -33,9 +30,8 @@ body {
     align-items: center;
 }
 
-/* キャッチコピーの文字デザイン */
 .catchphrase {
     font-size: 48px;
-    color: #333333;
+    color: #102a43; /* 深いネイビー */
     letter-spacing: 0.1em;
 }
