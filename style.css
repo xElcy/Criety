@@ -765,3 +765,19 @@ body {
         gap: 40px;
     }
 }
+/* =========================================
+   スクロールアニメーション（フワッと浮き上がる）
+========================================= */
+
+/* 最初は透明（opacity: 0）で、下に30pxずらしておく */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* 画面に入って .appear クラスが付いたら、透明度100%になり元の位置に戻る */
+.fade-in-up.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
