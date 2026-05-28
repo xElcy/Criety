@@ -98,6 +98,7 @@ body {
     .hero-section .catchphrase {
         font-size: 32px;
     }
+}
     /* ▼▼ ボタンのデザイン ▼▼ */
 .btn {
     display: inline-block;
@@ -117,4 +118,20 @@ body {
 .btn:hover {
     background-color: #102a43; /* マウスを乗せたらネイビーに変わる */
 }
+/* ▼▼ サブページ（詳細ページ）のレイアウト ▼▼ */
+.page-container {
+    padding: 120px 40px 60px; /* 上部のロゴに重ならないように余白を作る */
+    max-width: 800px;
+    margin: 0 auto;
+    min-height: 100vh; /* 最低でも画面の高さ分は確保する */
+    box-sizing: border-box;
+}
+
+.page-title {
+    font-size: 32px;
+    color: #102a43;
+    border-bottom: 2px solid #102a43; /* タイトルの下にネイビーの線を引く */
+    padding-bottom: 16px;
+    margin-bottom: 40px;
+    letter-spacing: 0.1em;
 }
