@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プライバシーポリシー | Criety Group</title>
+    <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+    <!-- ナビゲーションバー -->
+    <nav class="top-nav">
+        <div class="logo"><a href="index.html"><img src="Criety_Logo.png" alt="Criety Group" class="logo-img"></a></div>
+        <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+        <div class="nav-menu" id="nav-menu">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="tutor.html">家庭教師サービス</a></li>
+                <li><a href="https://forms.gle/あなたのフォームのURL" target="_blank" rel="noopener noreferrer" class="nav-contact-btn">お問い合わせ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- プライバシーポリシー本文 -->
+    <section class="tutor-hero-section" style="height: auto; padding: 150px 20px 80px; background-color: #102a43; color: #fff; text-align: center;">
+        <h1 style="font-size: 32px; letter-spacing: 0.1em;">プライバシーポリシー</h1>
+    </section>
+
+    <section style="max-width: 800px; margin: 0 auto; padding: 60px 20px; color: #334e68; line-height: 1.8;">
+        <h2 style="font-size: 20px; color: #102a43; border-left: 4px solid #2a69ac; padding-left: 12px; margin-bottom: 16px;">1. 個人情報の取得について</h2>
+        <p style="margin-bottom: 40px;">Criety Group（以下「当グループ」）は、お問い合わせやサービスのお申し込みに際して、お名前、メールアドレス、電話番号等の個人情報を取得する場合があります。これらの情報は、適法かつ公正な手段により取得します。</p>
+
+        <h2 style="font-size: 20px; color: #102a43; border-left: 4px solid #2a69ac; padding-left: 12px; margin-bottom: 16px;">2. 個人情報の利用目的</h2>
+        <p style="margin-bottom: 40px;">取得した個人情報は、以下の目的で利用いたします。<br>
+        ・サービスの提供および運営のため<br>
+        ・お問い合わせへの回答のため<br>
+        ・重要なお知らせなど必要に応じたご連絡のため</p>
+
+        <h2 style="font-size: 20px; color: #102a43; border-left: 4px solid #2a69ac; padding-left: 12px; margin-bottom: 16px;">3. 個人情報の第三者提供</h2>
+        <p style="margin-bottom: 40px;">当グループは、法令に基づく場合を除き、あらかじめご本人の同意を得ることなく、個人情報を第三者に提供いたしません。</p>
+
+        <h2 style="font-size: 20px; color: #102a43; border-left: 4px solid #2a69ac; padding-left: 12px; margin-bottom: 16px;">4. お問い合わせ窓口</h2>
+        <p style="margin-bottom: 40px;">本ポリシーに関するお問い合わせは、当サイトの「お問い合わせフォーム」よりお願いいたします。</p>
+    </section>
+
+    <!-- フッター -->
+    <footer class="site-footer" style="text-align: center; padding: 40px 20px; background-color: #f8f9fa; border-top: 1px solid #dce4ec;">
+        <div class="footer-links" style="margin-bottom: 16px;">
+            <a href="privacy.html" style="color: #334e68; text-decoration: none; font-size: 14px; margin: 0 12px;">プライバシーポリシー</a>
+            <a href="law.html" style="color: #334e68; text-decoration: none; font-size: 14px; margin: 0 12px;">特定商取引法に基づく表記</a>
+        </div>
+        <p style="color: #829ab1; font-size: 14px; margin: 0;">&copy; 2026 Criety Group. All rights reserved.</p>
+    </footer>
+
+    <!-- ハンバーガーメニュー用JS -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('nav-menu');
+            hamburger.addEventListener('click', function() {
+                hamburger.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
