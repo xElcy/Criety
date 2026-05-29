@@ -182,5 +182,26 @@
             });
         });
     </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('nav-menu');
+            
+            // ハンバーガーボタンが押された時の処理
+            hamburger.addEventListener('click', function() {
+                hamburger.classList.toggle('active'); // ×印と三本線の切り替え
+                navMenu.classList.toggle('active'); // メニューの出し入れ
+            });
+
+            // メニューの中のリンクを押したら、自動的にメニューを閉じる
+            const navLinks = document.querySelectorAll('.nav-menu a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                });
+            });
+        });
+    </script>
 </body>
 </html>
